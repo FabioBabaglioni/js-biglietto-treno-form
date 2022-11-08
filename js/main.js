@@ -11,6 +11,9 @@ let buttonAnnulla = document.getElementById("reset");
 let costoTotale
 let sconto
 let costo
+let code
+let codeUnic
+
 
 
 buttonInvia.addEventListener("click",
@@ -36,14 +39,22 @@ buttonInvia.addEventListener("click",
         if (eta< 18) {
             sconto = (costoTotale * 20) / 100 
             costo = (costoTotale - sconto);
-            console.log("Il tuo biglietto costerà:", costo)
         }else if (eta >= 65){ // se over 65 applica sconto del 40%
             sconto = (costoTotale * 40) / 100;
             costo = (costoTotale - sconto);
-            console.log("Il tuo biglietto costerà:", costo)
         }else{
-            console.log("Il tuo biglietto costerà:", costoTotale)
+            costo = costoTotale
         }
+
+        code = Math.floor(Math.random() * 10) + 1;
+        codeUnic = Math.floor(Math.random() * 10000) + 1000;
+
+        document.getElementById("carrozza").innerHTML = `Biglietto standard`
+        document.getElementById("carrozza").innerHTML = `${code}`
+        document.getElementById("codice").innerHTML = `${codeUnic}`
+        document.getElementById("costo").innerHTML = `${costo}€`
+
+
     }
 
 );
@@ -62,6 +73,10 @@ buttonAnnulla.addEventListener("click",
     }
 
 );
+
+
+
+
 
 
 
