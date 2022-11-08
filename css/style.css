@@ -1,0 +1,34 @@
+.title{
+    color: white;
+    padding-top: 20px;
+}
+
+main{
+    background-color: #b91450;
+    height: 100vh;
+    color: #b91450;
+}
+
+#section_1{
+    background-color: white;
+    border-radius: 40px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.container{
+    width: 60%;
+    margin: 0 auto;
+}
+
+.input{
+    border-radius: 3px;
+    border: 1px solid #b91450;
+}
+
+.button{
+    border: 1px solid #b91450;
+    color: #b91450;
+    border-radius: 3px;
+    margin-right: 10px;
+}

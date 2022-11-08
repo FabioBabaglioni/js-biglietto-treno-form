@@ -7,6 +7,7 @@ let generalita = document.getElementById("nome_cognome");
 let km = document.getElementById("percorso");
 let anni = document.getElementById("age");
 let buttonInvia = document.getElementById("invia");
+let buttonAnnulla = document.getElementById("reset");
 let costoTotale
 let sconto
 let costo
@@ -17,15 +18,12 @@ buttonInvia.addEventListener("click",
     function(){ 
         // chiedere all'utente le generalità
         const nome  = generalita.value
-        generalita.value = ""
 
         // chiedere all'utente i kilometri da percorrere
         const percorso  = km.value
-        km.value = ""
 
         // chiedere all'utente l'età
         const eta  = anni.value
-        anni.value = ""
 
         console.log("nome", eta, "km", percorso, "nome", nome);
 
@@ -49,4 +47,21 @@ buttonInvia.addEventListener("click",
     }
 
 );
+
+buttonAnnulla.addEventListener("click",
+
+    function(){ 
+        // reset generalità
+        generalita.value = ""
+
+        // reset kilometri da percorrere
+        km.value = ""
+
+        // reset l'età
+        anni.value = ""
+    }
+
+);
+
+
 

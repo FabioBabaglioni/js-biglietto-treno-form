@@ -10,27 +10,40 @@
 </head>
 <body>
     
-    <main>
-        <h1>Calcola il prezzo del tuo biglietto</h1>
+    <main class="text-center">
+        <h2 class="title">Calcola il prezzo del tuo biglietto</h2>
 
-        <section class="d-flex">
-            <div class="row">
-                <div class="col-4 text-center">
-                    <div>nome e cognome</div>
-                    <input type="text" id="nome_cognome">
+        <section id="section_1">
+            <div class="d-flex justify-content-around pt-3 container">
+                <div class="text-center">
+                    <div class="pb-2">nome e cognome</div>
+                    <input type="text" class="input" id="nome_cognome">
                 </div>
 
-                <div class="col-4 text-center">
-                    <div>Km da percorrere</div>
-                    <input type="text" id="percorso">
+                <div class="text-center">
+                    <div class="pb-2">Km da percorrere</div>
+                    <input type="text" class="input" id="percorso">
                 </div>
             
-                <div class="col-4 text-center">
-                    <div>Fascia d'età</div>
-                    <input type="text" id="age">
+                <div class="text-center">
+                    <div class="pb-2">Fascia d'età</div>
+                    <input type="text" class="input" id="age">
+                </div>
+            </div> 
+
+            <div class="d-flex justify-content-center py-5">
+                <div>
+                    <button class="button" id="invia">Genera</button>
+                </div>
+                <div>
+                    <button class="button" id="reset">annulla</button>
                 </div>
             </div>
-            <button id="invia">Genera</button>
+            
+        </section>
+
+        <section>
+            <h2 class="title">Il tuo Biglietto</h2>
         </section>
         
         
