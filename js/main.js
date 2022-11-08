@@ -3,12 +3,10 @@
 
 // variabili
 const costoPrimo = 0.21 
-const generalita = document.getElementById("nome_cognome");
-const buttonInvia = document.getElementById("invia");
-const age = document.getElementById("age");
-
-let anni
-let kilometriDaPercorrere
+let generalita = document.getElementById("nome_cognome");
+let km = document.getElementById("percorso");
+let anni = document.getElementById("age");
+let buttonInvia = document.getElementById("invia");
 let costoTotale
 let sconto
 let costo
@@ -16,41 +14,39 @@ let costo
 
 buttonInvia.addEventListener("click",
 
-    function(){
-        const nome  = inputField.value
-        console.log(nome);
+    function(){ 
+        // chiedere all'utente le generalità
+        const nome  = generalita.value
+        generalita.value = ""
+
+        // chiedere all'utente i kilometri da percorrere
+        const percorso  = km.value
+        km.value = ""
+
+        // chiedere all'utente l'età
+        const eta  = anni.value
+        anni.value = ""
+
+        console.log("nome", eta, "km", percorso, "nome", nome);
+
+        costoTotale = costoPrimo * percorso
+
+        // calcolare il costo totale del biglietto
+        console.log(costoTotale);
+
+        // se minorenne (sotto i 18 annni) allora applica sconto 20%
+        if (eta< 18) {
+            sconto = (costoTotale * 20) / 100 
+            costo = (costoTotale - sconto);
+            console.log("Il tuo biglietto costerà:", costo)
+        }else if (eta >= 65){ // se over 65 applica sconto del 40%
+            sconto = (costoTotale * 40) / 100;
+            costo = (costoTotale - sconto);
+            console.log("Il tuo biglietto costerà:", costo)
+        }else{
+            console.log("Il tuo biglietto costerà:", costoTotale)
+        }
     }
 
 );
 
-
-
-
-// chiedere all'utente gli anni 
-
-
-
-// chiedere all'utente il numero dei kilometri che dovrà percorrere
-
-// kilometriDaPercorrere = parseInt(prompt("Quanti chilometri dovrai percorrere?"));
-
-// console.log(kilometriDaPercorrere);
-
-// calcolare il costo totale del biglietto
-
-costoTotale = costoPrimo * kilometriDaPercorrere
-
-// console.log(costoTotale);
-
-// se minorenne (sotto i 18 annni) allora applica sconto 20%
-if (anni < 18) {
-    sconto = (costoTotale * 20) / 100 
-    costo = (costoTotale - sconto);
-    // console.log("Il tuo biglietto costerà:", costo)
-}else if (anni >= 65){ // se over 65 applica sconto del 40%
-    sconto = (costoTotale * 40) / 100;
-    costo = (costoTotale - sconto);
-    // console.log("Il tuo biglietto costerà:", costo)
-}else{
-    // console.log("Il tuo biglietto costerà:", costoTotale)
-}
