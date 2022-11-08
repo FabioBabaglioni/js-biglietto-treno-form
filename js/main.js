@@ -49,7 +49,8 @@ buttonInvia.addEventListener("click",
         code = Math.floor(Math.random() * 10) + 1;
         codeUnic = Math.floor(Math.random() * 10000) + 1000;
 
-        document.getElementById("carrozza").innerHTML = `Biglietto standard`
+        document.getElementById("name").innerHTML = `${nome}`
+        document.getElementById("offerta").innerHTML = `Biglietto standard`
         document.getElementById("carrozza").innerHTML = `${code}`
         document.getElementById("codice").innerHTML = `${codeUnic}`
         document.getElementById("costo").innerHTML = `${costo}€`
